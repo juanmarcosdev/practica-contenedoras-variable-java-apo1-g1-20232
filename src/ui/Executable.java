@@ -33,15 +33,24 @@ public class Executable {
 
     public void run() {
 
-        System.out.println(cont.aulaVacia());
-        cont.agregarEstudianteALista(cont.crearEstudiante("Juan"));
-        System.out.println(cont.aulaVacia());
-        System.out.println(cont.numeroEstudiantes());
 
+        // System.out.println(cont.aulaVacia());
+        cont.agregarEstudianteALista(cont.crearEstudiante("Juan Pablo Arevalo"));
+        // System.out.println(cont.aulaVacia());
+        cont.agregarEstudianteALista(cont.crearEstudiante("Fredy Cifuentes"));
+        // System.out.println(cont.numeroEstudiantes());
+        cont.reemplazarEstudiante(1, cont.crearEstudiante("Jhoan Manuel Tovar"));
+        cont.agregarEstudianteALista(cont.crearEstudiante("Juan Pablo Pino"));
+        cont.agregarEstudianteALista(cont.crearEstudiante("Camilo Cantillo"));
+
+        ArrayList <String> saludos = new ArrayList<String>();
         for(int i = 0; i < cont.numeroEstudiantes(); i++) {
-            System.out.println(cont.presentarNombreEstudiante(cont.obtenerEstudianteIesimo(i)));
+            saludos.add(cont.presentarNombreEstudiante(cont.devolverAula().get(i)));
         }
 
+        for(String elemento : saludos) {
+            System.out.println(elemento);
+        }
     }
 
     /**

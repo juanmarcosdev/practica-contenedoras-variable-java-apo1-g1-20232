@@ -52,7 +52,7 @@ public class Controller {
     }
 
     public String presentarNombreEstudiante(Estudiante estudiante) {
-        return estudiante.getNombre();
+        return "Hola, soy " + estudiante.getNombre();
     }
 
 
